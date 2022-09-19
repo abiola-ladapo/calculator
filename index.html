@@ -31,11 +31,29 @@
         <button onclick="calculate(0)">0</button>
         <button id="equal" onclick="answer()">=</button>
       </div>
-
-
         </div>
       </div>
     </div>
-    <script src="cal.js"></script>
+    <script>
+      let result =document.getElementById('result')
+let calculate = (number)=>{
+ result.value+=number;
+
+}
+function answer(){
+ try{
+  result.value=eval(result.value)
+ }
+ catch(error){
+  alert('Enter the valid input');
+ }
+}
+function clearrr(){
+ result.value =" ";
+}
+function del(){
+ result.value=result.value.slice(0,-1)
+}
+    </script>
   </body>
 </html>
